@@ -1,7 +1,6 @@
 # Tutorial: Como configurar Codacy en un repositorio nuevo
 
-[![Build Status](https://travis-ci.org/alu0100769609/TravisTest.svg?branch=travis)](https://travis-ci.org/alu0100769609/TravisTest)
-
+![Codacy logo](https://avatars2.githubusercontent.com/u/19940114?s=460&v=4)
 
 ## ¿Qué es Codacy?
 
