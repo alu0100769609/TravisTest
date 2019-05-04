@@ -22,5 +22,9 @@ test {
     }
 }
 
+task installGitHooks() {
+  "cp gradle/pre-commit .git/hooks/".execute()
+}
+
 // Define the main class for the application
 mainClassName = 'main.java.pract3.App'
