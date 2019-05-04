@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/alu0100769609/TravisTest.svg?branch=travis)](https://travis-ci.org/alu0100769609/TravisTest)
 
+![Travis Logo](https://travis-ci.com/images/logos/TravisCI-Full-Color.png)
+
 
 ## Habilitando Travis
 
