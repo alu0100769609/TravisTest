@@ -9,6 +9,7 @@ class AppTest {
 	@Test
 	void test() {
 		assertEquals(true, true);
+		assertTrue(false);
 	}
 
 }
