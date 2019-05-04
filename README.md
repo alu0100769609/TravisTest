@@ -3,9 +3,7 @@
 [![Build Status](https://travis-ci.org/alu0100769609/TravisTest.svg?branch=travis)](https://travis-ci.org/alu0100769609/TravisTest)
 
 
-## Como configurar
-
-### Habilitando Travis
+## Habilitando Travis
 
 Primero hay que entrar en ![Travis CI (org)](https://travis-ci.org/dashboard).
 
@@ -28,7 +26,7 @@ Hecho esto, podremos ver como ahora el repositorio aparece en nuestra __página 
 ![Dashboard](https://i.imgur.com/PUDPuqf.png)
 
 
-### Configurando el repositorio con `.travis.yml`
+## Configurando el repositorio con `.travis.yml`
 
 > Para más información, el ![tutorial oficial en la página de Travis CI](https://docs.travis-ci.com/user/languages/java/) indica como configurar un proyecto de Java con Travis, además de información sobre los errores más comunes.
 
@@ -111,7 +109,8 @@ mainClassName = 'TravisTest.App'
 ```
 
 No tendremos que cambiar mucho la configuración por defecto. A continuación, pondremos el fichero `build.gradle` utilizado por este proyecto. En el, simplemente hemos cambiado la versión de __JUnit__ a __JUnit 5__, y la ruta de `mainClassName` a la ruta al __main__ en nuestro proyecto:
-```
+
+```groovy
 plugins {
     id 'java'
     id 'application'
@@ -139,3 +138,33 @@ test {
 mainClassName = 'main.java.pract3.App'
 ```
 
+Podemos utilizar algunos comandos de __Gradle__ para comprobar que lo hemos configurado correctamente.
+* Para __compilar__ el proyecto: `./gradlew build`
+* Para __ejecutar los tests__: `./gradlew test`
+* Para __ejecutar el proyecto__: `./gradlew run`
+
+Ahora que ya tenemos __Gradle__ configurado, podemos continuar configurando __Travis CI__.
+
+### Creando el fichero `travis.yml`
+
+El fichero es tan sencillo, que la mejor forma de entenderlo es verlo directamente. Crea en la __raiz del repositorio__ el fichero `.travis.yml` con el siguiente contenido:
+
+```yml
+language: java
+
+jdk:
+- oraclejdk11
+```
+
+* `language`: __Lenguaje de programación__ del proyecto. En este caso, __Java__
+* `jdk`: __Versión de Java__ a utilizar. En este caso, __Java 11__
+
+Y ya está. Travis reconocerá __automáticamente__ que el proyecto está configurado con __Gradle__ y utilizará el comando `./gradlew check (equivalente a ./gradlew test)` para ejecutar los tests y actualizar el estado del repositorio.
+
+## Utilizando Travis CI
+
+Hay que recordar que __Travis__ no es una herramienta que se utilice directamente, sino que se ejecuta __cada vez que hacemos un push__ al repositorio.
+
+Por tanto, podemos hacer un __push__ con la configuración que acabamos de añadir para comprobar si Travis está funcionando correctamente.
+
+Tras hacer el push, volvemos a ![Travis CI](https://travis-ci.org/)
