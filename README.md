@@ -1,6 +1,5 @@
-# TravisTest
+# Tutorial: Como configurar Travis CI en un repositorio nuevo
 
-## Travis configured!!
 [![Build Status](https://travis-ci.org/alu0100769609/TravisTest.svg?branch=travis)](https://travis-ci.org/alu0100769609/TravisTest)
 
 
@@ -29,4 +28,4 @@ Hecho esto, podremos ver como ahora el repositorio aparece en nuestra __página 
 ![Dashboard](https://i.imgur.com/PUDPuqf.png)
 
 
-### Configurando el repositorio
+### Configurando el repositorio con `travis.yml`
