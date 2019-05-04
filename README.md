@@ -168,3 +168,7 @@ Hay que recordar que __Travis__ no es una herramienta que se utilice directament
 Por tanto, podemos hacer un __push__ con la configuración que acabamos de añadir para comprobar si Travis está funcionando correctamente.
 
 Tras hacer el push, volvemos a ![Travis CI](https://travis-ci.org/)
+
+Veremos como ahora en el repositorio que configuramos nos saldrá los datos durane la __integración__ del último commit, y si ha tenido éxito. También podemos revisar todos los comandos que ha ejecutado __Travis__, por si lo necesitáramos para depurar errores.
+
+![Travis de nuevo](https://i.imgur.com/UqUEaCO.png)
